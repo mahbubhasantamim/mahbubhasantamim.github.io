@@ -9,7 +9,7 @@ const HeaderComp = () => {
         <div className="">
           <div className="py-20 lg:py-28">
             <h2 className="font-Edu-nsw">Hello, I'm</h2>
-            <h1 className="text-4xl font-semibold text-yellow-300">
+            <h1 className="text-4xl font-semibold text-purple-300">
               Mahbub Hasan Tamim
             </h1>
             <h3 className="font-Edu-nsw text-white">
@@ -19,7 +19,7 @@ const HeaderComp = () => {
             <div className="flex gap-2 items-center mt-8">
               <Link
                 to="https://www.fiverr.com/mahbub104558"
-                className="border py-2 px-3 rounded-sm text-xs bg-white text-slate-900 hover:bg-transparent hover:text-white"
+                className="border py-2 px-3 rounded-sm text-xs bg-purple-100 text-slate-900 hover:bg-transparent hover:text-white"
               >
                 Hire me
               </Link>

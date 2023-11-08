@@ -15,11 +15,16 @@ const AboutComp = () => {
               alt=""
               className="w-60 mx-auto md:float-right rounded-e-md hidden md:block"
             />
-            <img
-              src={abimgMob}
-              alt=""
-              className="w-40 mx-auto md:float-right rounded-full md:hidden "
-            />
+            <div className="flex justify-center md:hidden">
+              <div>
+                <div className="absolute w-40 h-40 rounded-full bg-gradient-to-tr from-pink-500 via-sky-800 to-purple-600 opacity-40 border-2 border-dotted  animate-spin"></div>
+                <img
+                  src={abimgMob}
+                  alt=""
+                  className="w-40 mx-auto md:float-right rounded-full  p-2 relative "
+                />
+              </div>
+            </div>
           </div>
           <div className="md:w-4/6 ">
             <p className="p-8 lg:p-10 text-sm font-Edu-nsw">

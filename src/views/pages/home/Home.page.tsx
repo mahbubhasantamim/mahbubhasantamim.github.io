@@ -7,7 +7,7 @@ import SkillComp from "./components/skill/Skill.comp";
 const HomePage = () => {
   return (
     <>
-      <div className="h-3 animate-pulse bg-gradient-to-r from-pink-500 to-slate-400 w-full sticky top-0"></div>
+      <div className="h-3 animate-pulse bg-gradient-to-r from-pink-500 to-slate-400 w-full sticky top-0 z-10"></div>
 
       <div className="font-Fira-Sans">
         <ContactToastComp />
