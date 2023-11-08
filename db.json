@@ -1,0 +1,22 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "productName": "Oppo",
+      "productPrice": 100,
+      "productDesc": " Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit ipsa ut omnis ducimus accusantium eveniet corrupti, quos quas quibusdam maxime."
+    },
+    {
+      "productName": "Vivo",
+      "productPrice": 199,
+      "productDesc": " Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit ipsa ut omnis ducimus accusantium eveniet corrupti, quos quas quibusdam maxime.",
+      "id": 2
+    },
+    {
+      "productName": "oppo A1",
+      "productPrice": 3434,
+      "productDesc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit",
+      "id": 4
+    }
+  ]
+}
