@@ -28,7 +28,7 @@ export const EducationComp = () => {
       <div className="px-6 md:px-16 pt-6 md:pt-10">
         <SectionHeadingComp>Education</SectionHeadingComp>
         <div className="py-6">
-          <div className="grid lg:grid-cols-3 divide-y lg:divide-y-0 lg:divide-x divide-slate-700 p-6 bg-slate-100 rounded-md">
+          <div className="grid lg:grid-cols-3 divide-y lg:divide-y-0 lg:divide-x divide-slate-700 p-6 bg-gradient-to-br from-slate-50 via-purple-50 to-pink-50 rounded-md shadow-md">
             {educationDetails.map((edu, index) => (
               <div key={index} className="hover:bg-slate-50 p-5">
                 <p className="text-xs md:text-sm bg-white inline-block px-4 rounded-md">

@@ -3,6 +3,7 @@ import { FooterComp } from "@/components/shared/footer/Footer.comp";
 import AboutComp from "./components/about/About.comp";
 import { EducationComp } from "./components/education/Education.comp";
 import HeaderComp from "./components/header/Header.comp";
+import { ProjectComp } from "./components/project/project.comp";
 import ServiceComp from "./components/service/Service.comp";
 import SkillComp from "./components/skill/Skill.comp";
 
@@ -18,6 +19,7 @@ const HomePage = () => {
         <SkillComp />
         <ServiceComp />
         <EducationComp />
+        <ProjectComp />
         <FooterComp />
       </div>
     </>

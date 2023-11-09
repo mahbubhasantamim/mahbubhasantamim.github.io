@@ -5,10 +5,10 @@ import abimg from "../../../../../assets/img/tamim-fearwell.png";
 const AboutComp = () => {
   return (
     <>
-      <div className="px-6 md:px-16 lg:px-0 pt-10">
+      <div className="px-6 md:px-16 pt-10">
         <SectionHeadingComp>About me</SectionHeadingComp>
 
-        <div className="md:flex lg:w-4/6 mx-auto my-6 bg-gradient-to-br from-slate-100 via-purple-100 to-pink-50 shadow-md hover:shadow-lg rounded-md">
+        <div className="md:flex  mx-auto my-6 bg-slate-50 shadow-md hover:shadow-lg rounded-md">
           <div className="md:w-2/6 md:order-last pt-6 md:pt-0">
             <img
               src={abimg}
@@ -27,7 +27,7 @@ const AboutComp = () => {
             </div>
           </div>
           <div className="md:w-4/6 ">
-            <p className="p-8 lg:p-10 text-sm font-Edu-nsw">
+            <p className="p-8 lg:p-10 text-sm lg:text-base font-Edu-nsw">
               Hello, I'm Mahbub Hasan, a passionate Full-stack Web Developer
               dedicated to crafting exceptional digital experiences. With a
               strong foundation in both front-end and back-end technologies, I
