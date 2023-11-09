@@ -32,7 +32,11 @@ export const FooterComp = () => {
 
         <p className="text-center font-Edu-nsw text-xs">
           &copy; 2023{" "}
-          <Link to="https://github.com/mahbubhasantamim/" target="_blank">
+          <Link
+            to="https://github.com/mahbubhasantamim/"
+            target="_blank"
+            className="hover:text-white"
+          >
             Mahbub Hasan
           </Link>
           . All rights reserved.
