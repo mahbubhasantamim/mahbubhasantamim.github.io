@@ -54,9 +54,10 @@ const ServiceComp = () => {
     <>
       <div className="px-6 md:px-16 pt-6 md:pt-10">
         <SectionHeadingComp>Services</SectionHeadingComp>
+
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-4 py-6">
-          {cardArr.map((cardObj) => (
-            <ServiceCardComp cardObj={cardObj} />
+          {cardArr.map((cardObj, index) => (
+            <ServiceCardComp key={index} cardObj={cardObj} />
           ))}
         </div>
       </div>
