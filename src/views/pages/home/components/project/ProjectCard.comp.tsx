@@ -14,9 +14,9 @@ export const ProjectCardComp = ({ projectDetails }: ProjectPropType) => {
     <>
       <div
         onClick={() => setIsModal(true)}
-        className="hover:bg-slate-50 hover:cursor-pointer"
+        className="rounded-md hover:cursor-pointer hover:shadow-md"
       >
-        <img src={projectDetails.projectImg} alt="" />
+        <img src={projectDetails.projectImg} alt="" className="rounded-md" />
         <p className="py-2 text-center text-xs md:text-sm">
           {projectDetails.projectTitle}
         </p>

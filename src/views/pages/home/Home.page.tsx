@@ -1,9 +1,10 @@
 import ContactToastComp from "@/components/shared/contactToast/ContactToast.comp";
 import { FooterComp } from "@/components/shared/footer/Footer.comp";
 import AboutComp from "./components/about/About.comp";
+import { ContactComp } from "./components/contact/Contact.comp";
 import { EducationComp } from "./components/education/Education.comp";
 import HeaderComp from "./components/header/Header.comp";
-import { ProjectComp } from "./components/project/project.comp";
+import { ProjectComp } from "./components/project/Project.comp";
 import ServiceComp from "./components/service/Service.comp";
 import SkillComp from "./components/skill/Skill.comp";
 
@@ -20,6 +21,7 @@ const HomePage = () => {
         <ServiceComp />
         <EducationComp />
         <ProjectComp />
+        <ContactComp />
         <FooterComp />
       </div>
     </>
