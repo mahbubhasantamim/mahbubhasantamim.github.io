@@ -9,6 +9,7 @@ export const ContactComp = () => {
         <p className="text-center font-Edu-nsw">
           I am happy to talk to you! Just complete the form.
         </p>
+
         <div className="py-6">
           <div className="flex bg-slate-200 rounded-md shadow-lg">
             <div className="w-2/6 px-2 lg:px-6 bg-slate-500 flex justify-center items-center rounded-s-md">
