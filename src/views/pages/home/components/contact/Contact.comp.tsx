@@ -1,7 +1,40 @@
 import SectionHeadingComp from "@/components/shared/sectionHeading/SectionHeading.comp";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useEffect } from "react";
+import { useForm } from "react-hook-form";
+import { z, ZodType } from "zod";
 import getInTouchImg from "../../../../../assets/img/getintouch.svg";
 
+type ContactFormType = {
+  name: string;
+  email: string;
+  message: string;
+};
+
 export const ContactComp = () => {
+  const contactFormSchema: ZodType<ContactFormType> = z.object({
+    name: z.string().min(1, "Name is required!"),
+    email: z.string().email({ message: "Please enter a valid email address!" }),
+    message: z.string().min(1, "Message is required!"),
+  });
+
+  const {
+    formState: { errors, isSubmitSuccessful },
+    register,
+    handleSubmit,
+    reset,
+  } = useForm<ContactFormType>({ resolver: zodResolver(contactFormSchema) });
+
+  const onSubmit = (data: ContactFormType) => {
+    console.log(data);
+  };
+
+  useEffect(() => {
+    if (isSubmitSuccessful) {
+      reset();
+    }
+  }, [isSubmitSuccessful, reset]);
+
   return (
     <>
       <div className="px-6 md:px-16 pt-6 md:pt-10">
@@ -15,26 +48,55 @@ export const ContactComp = () => {
             <div className="w-2/6 px-2 lg:px-6 bg-slate-500 flex justify-center items-center rounded-s-md">
               <img src={getInTouchImg} alt="" className="w-full" />
             </div>
+
             <div className="w-4/6 py-6 md:py-10 px-4 md:px-10">
-              <form className="text-xs">
+              <form onSubmit={handleSubmit(onSubmit)} className="text-xs">
                 <div className="flex flex-col lg:flex-row gap-3">
-                  <input
-                    type="text"
-                    placeholder="Enter your name"
-                    className="lg:w-1/2 p-2 rounded-md shadow-inner"
-                  />
-                  <input
-                    type="email"
-                    placeholder="Enter your email"
-                    className="lg:w-1/2 p-2 rounded-md shadow-inner"
-                  />
+                  <div className="lg:w-1/2">
+                    <input
+                      type="text"
+                      placeholder="Enter your name"
+                      {...register("name")}
+                      className={
+                        errors.name
+                          ? `w-full p-2 rounded-md shadow-inner border border-red-500 outline-red-500 `
+                          : `w-full p-2 rounded-md shadow-inner`
+                      }
+                    />
+                    <span className="text-xs text-red-500">
+                      {errors.name?.message}
+                    </span>
+                  </div>
+
+                  <div className="lg:w-1/2">
+                    <input
+                      type="email"
+                      placeholder="Enter your email"
+                      {...register("email")}
+                      className={
+                        errors.email
+                          ? `w-full p-2 rounded-md shadow-inner border border-red-500 outline-red-500 `
+                          : `w-full p-2 rounded-md shadow-inner`
+                      }
+                    />
+                    <span className="text-xs text-red-500">
+                      {errors.email?.message}
+                    </span>
+                  </div>
                 </div>
                 <div>
                   <textarea
-                    name="msg"
                     placeholder="Your message"
-                    className="w-full h-20 md:h-28 lg:h-36 mt-3 p-2 rounded-md shadow-inner"
+                    {...register("message")}
+                    className={
+                      errors.message
+                        ? `w-full h-20 md:h-28 lg:h-36 mt-3 p-2 rounded-md shadow-inner border border-red-500 outline-red-500`
+                        : `w-full h-20 md:h-28 lg:h-36 mt-3 p-2 rounded-md shadow-inner`
+                    }
                   ></textarea>
+                  <span className="text-xs text-red-500">
+                    {errors.message?.message}
+                  </span>
                 </div>
                 <div className="text-right">
                   <button
