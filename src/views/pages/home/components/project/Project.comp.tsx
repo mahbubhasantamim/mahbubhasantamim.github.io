@@ -1,11 +1,11 @@
 import SectionHeadingComp from "@/components/shared/sectionHeading/SectionHeading.comp";
-import programSurfaceThumb from "../../../../../assets/img/portfolio-img/programSurface.png";
+// import programSurfaceThumb from "../../../../../assets/img/portfolio-img/programSurface.png";
 import backendImg from "../../../../../assets/img/service-img/Backend-development.png";
 import { ProjectCardComp } from "./ProjectCard.comp";
 export const ProjectComp = () => {
   const projects = [
     {
-      projectImg: programSurfaceThumb,
+      projectImg: backendImg,
       projectTitle: "Program surface",
     },
     {
