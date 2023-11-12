@@ -1,8 +1,10 @@
 import SectionHeadingComp from "@/components/shared/sectionHeading/SectionHeading.comp";
+import emailjs from "@emailjs/browser";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useEffect } from "react";
 import { useForm } from "react-hook-form";
-import { z, ZodType } from "zod";
+import { AiOutlineLoading } from "react-icons/ai";
+import { ZodType, z } from "zod";
 import getInTouchImg from "../../../../../assets/img/getintouch.svg";
 
 type ContactFormType = {
@@ -19,7 +21,7 @@ export const ContactComp = () => {
   });
 
   const {
-    formState: { errors, isSubmitSuccessful },
+    formState: { errors, isSubmitSuccessful, isSubmitting },
     register,
     handleSubmit,
     reset,
@@ -27,6 +29,17 @@ export const ContactComp = () => {
 
   const onSubmit = (data: ContactFormType) => {
     console.log(data);
+    const SERVICE_ID = "service_safs0ty";
+    const TEMPLETE_ID = "template_g7qxy4w";
+    const PUBLICE_KEY = "VTtrUE043M1Y6MaXF";
+    emailjs.send(SERVICE_ID, TEMPLETE_ID, data, PUBLICE_KEY).then(
+      (result) => {
+        console.log(result);
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
   };
 
   useEffect(() => {
@@ -101,9 +114,16 @@ export const ContactComp = () => {
                 <div className="text-right">
                   <button
                     type="submit"
+                    disabled={isSubmitting}
                     className="mt-2 w-full text-xs bg-slate-700 text-slate-50 py-2 px-4 rounded-md shadow-lg hover:bg-slate-600"
                   >
-                    Send messge
+                    {isSubmitting ? (
+                      <div className="flex justify-center text-lg">
+                        <AiOutlineLoading className="animate-spin" />
+                      </div>
+                    ) : (
+                      "Send message"
+                    )}
                   </button>
                 </div>
               </form>

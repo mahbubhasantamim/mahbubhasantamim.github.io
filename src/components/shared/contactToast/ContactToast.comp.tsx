@@ -17,14 +17,14 @@ const ContactToastComp = () => {
           <BiMailSend />
         </Link>
         <Link
-          to="https://facebook.com/mahbubhassantamim"
+          to="https://www.linkedin.com/in/mahbubhasantamim/"
           target="_blank"
           className="p-1 hover:bg-slate-50 rounded-md "
         >
           <BiLogoLinkedinSquare />
         </Link>
         <Link
-          to="https://www.linkedin.com/in/mahbubhasantamim/"
+          to="https://facebook.com/mahbubhassantamim"
           target="_blank"
           className="p-1 hover:bg-slate-50 rounded-md "
         >
