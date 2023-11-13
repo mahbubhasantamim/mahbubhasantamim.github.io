@@ -19,6 +19,7 @@ const HeaderComp = () => {
             <div className="flex gap-2 items-center mt-8">
               <Link
                 to="https://www.fiverr.com/mahbub104558"
+                target="_blank"
                 className="border py-2 px-3 rounded-sm text-xs bg-purple-100 text-slate-900 hover:bg-transparent hover:text-white"
               >
                 Hire me

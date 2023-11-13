@@ -12,6 +12,8 @@ type ServicePropType = {
 export const ServiceCardComp = ({ cardObj }: ServicePropType) => {
   const [isModal, setIsModal] = useState(false);
 
+  const shortDesc = cardObj.serviceDesc.split(" ").slice(0, 30).join(" ");
+
   return (
     <>
       <div
@@ -21,7 +23,9 @@ export const ServiceCardComp = ({ cardObj }: ServicePropType) => {
         <img src={cardObj.imgLink} alt="" className="rounded-t-sm" />
         <div className="p-6">
           <h3 className="text-lg font-semibold mb-3">{cardObj.serviceTitle}</h3>
-          <p className=" text-sm">{cardObj.serviceDesc}</p>
+          <p className=" text-sm">
+            {shortDesc}| <b>Details...</b>{" "}
+          </p>
         </div>
       </div>
       {isModal && (

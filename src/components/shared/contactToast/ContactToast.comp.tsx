@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 const ContactToastComp = () => {
   return (
     <>
-      <div className="flex gap-1 bg-slate-200 text-slate-900 py-2 px-6 rounded-full w-fit fixed bottom-4 md:bottom-8 left-6  shadow-xl text-2xl z-50">
+      <div className="flex gap-1 bg-slate-200 text-slate-900 py-2 px-6 rounded-full w-fit fixed bottom-4 md:bottom-8 left-6  shadow-xl text-2xl z-40">
         <Link
           to="mailto:mahbubhasan.pro@gmail.com"
           className="p-1 hover:bg-slate-50 rounded-md "

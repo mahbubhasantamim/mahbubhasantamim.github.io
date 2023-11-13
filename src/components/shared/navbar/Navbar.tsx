@@ -15,22 +15,7 @@ const Navbar = () => {
               Home
             </NavLink>
           </li>
-          <li>
-            <NavLink
-              to="#about"
-              className="py-1 px-4 inline-block hover:bg-slate-300 hover:text-slate-900 rounded-sm"
-            >
-              About
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="#services"
-              className="py-1 px-4 inline-block hover:bg-slate-300 hover:text-slate-900 rounded-sm"
-            >
-              Services
-            </NavLink>
-          </li>
+
           <li>
             <NavLink
               to="./projects"
@@ -39,14 +24,7 @@ const Navbar = () => {
               Projects
             </NavLink>
           </li>
-          <li>
-            <NavLink
-              to="#contact"
-              className="py-1 px-4 inline-block hover:bg-slate-300 hover:text-slate-900 rounded-sm"
-            >
-              Contact
-            </NavLink>
-          </li>
+
           <li>
             <NavLink
               to="https://github.com/mahbubhasantamim"

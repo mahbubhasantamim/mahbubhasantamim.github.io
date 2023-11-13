@@ -10,6 +10,19 @@
   src: url("./assets/fonts/EduNSWACTFoundation-VariableFont_wght.ttf");
 }
 
+@keyframes scale {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-scale {
+  animation: scale 0.5s ease-in-out;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
