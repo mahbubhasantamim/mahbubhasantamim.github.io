@@ -2,6 +2,7 @@ import SectionHeadingComp from "@/components/shared/sectionHeading/SectionHeadin
 // import programSurfaceThumb from "../../../../../assets/img/portfolio-img/programSurface.png";
 import backendImg from "../../../../../assets/img/service-img/Backend-development.png";
 import { ProjectCardComp } from "./ProjectCard.comp";
+
 export const ProjectComp = () => {
   const projects = [
     {
