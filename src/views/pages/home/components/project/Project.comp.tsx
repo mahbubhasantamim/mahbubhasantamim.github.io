@@ -14,6 +14,7 @@ export const ProjectComp = () => {
       projectTitle: "Program",
     },
   ];
+  
   return (
     <>
       <div className="px-6 md:px-16 pt-6 md:pt-10">
