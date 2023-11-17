@@ -16,10 +16,14 @@ export const ProjectCardComp = ({ projectDetails }: ProjectPropType) => {
         onClick={() => setIsModal(true)}
         className="rounded-md hover:cursor-pointer hover:shadow-md"
       >
-        <img src={projectDetails.projectImg} alt="" className="rounded-md" />
-        <p className="py-2 text-center text-xs md:text-sm">
-          {projectDetails.projectTitle}
-        </p>
+        <div className="relative">
+          <img src={projectDetails.projectImg} alt="" className="rounded-md" />
+          <div className="bg-gradient-to-t from-slate-300 w-full absolute bottom-0">
+            <h3 className="pt-8 pb-1 text-center text-xs md:text-base uppercase font-bold">
+              {projectDetails.projectTitle}
+            </h3>
+          </div>
+        </div>
       </div>
       {isModal && (
         <ModalComp modalFn={setIsModal}>
