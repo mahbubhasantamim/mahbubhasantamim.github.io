@@ -1,10 +1,12 @@
 import { ModalComp } from "@/components/shared/modal/Modal.comp";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 type ProjectPropType = {
   projectDetails: {
     projectImg: string;
     projectTitle: string;
+    projectUrl: string;
   };
 };
 export const ProjectCardComp = ({ projectDetails }: ProjectPropType) => {
@@ -27,7 +29,14 @@ export const ProjectCardComp = ({ projectDetails }: ProjectPropType) => {
       </div>
       {isModal && (
         <ModalComp modalFn={setIsModal}>
-          <p>{projectDetails.projectTitle}</p>
+          <p className="pb-8">{projectDetails.projectTitle}</p>
+          <Link
+            to={projectDetails.projectUrl}
+            target="_blank"
+            className="bg-slate-600 text-slate-50 py-2 px-4 rounded-md block text-center hover:bg-slate-400"
+          >
+            Live url
+          </Link>
         </ModalComp>
       )}
     </>

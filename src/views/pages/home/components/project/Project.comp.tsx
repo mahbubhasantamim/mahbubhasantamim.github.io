@@ -1,20 +1,23 @@
 import SectionHeadingComp from "@/components/shared/sectionHeading/SectionHeading.comp";
-// import programSurfaceThumb from "../../../../../assets/img/portfolio-img/programSurface.png";
-import backendImg from "../../../../../assets/img/service-img/Backend-development.png";
+
+import programSurfaceImg from "../../../../../assets/img/portfolio-img/program-surface.jpg";
+import xeertImg from "../../../../../assets/img/portfolio-img/xeert.jpg";
 import { ProjectCardComp } from "./ProjectCard.comp";
 
 export const ProjectComp = () => {
   const projects = [
     {
-      projectImg: backendImg,
-      projectTitle: "Program surface",
+      projectImg: xeertImg,
+      projectTitle: "Xeert",
+      projectUrl: "https://xeert.netlify.app/",
     },
     {
-      projectImg: backendImg,
-      projectTitle: "Program",
+      projectImg: programSurfaceImg,
+      projectTitle: "Program surface",
+      projectUrl: "https://program-surface.onrender.com/",
     },
   ];
-  
+
   return (
     <>
       <div className="px-6 md:px-16 pt-6 md:pt-10">
